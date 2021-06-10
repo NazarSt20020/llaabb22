@@ -1,0 +1,54 @@
+using System;
+
+class A
+{
+    static void Main()
+    {
+        int size = int.Parse(Console.ReadLine());
+        try
+        {
+            int[] arr = new int[size];
+            int step = arr.Length / 2;
+            int j;
+
+            Random r = new Random();
+
+            for (int i = 0; i < size; i++)
+                arr[i] = r.Next(10, 100);
+
+            foreach (int x in arr)
+        }
+        catch(Exception ex)
+        {
+            Console.Write(x + " ");
+        }
+        finally
+        {
+            Console.WriteLine("Good bye !");
+        }
+        Console.ReadLine();
+
+        while (step > 0)//shell sort
+            {
+                for (int i = 0; i < (arr.Length - step); i++)
+                {
+                    j = i;
+                    while ((j >= 0) && (arr[j] > arr[j + step]))
+                    try
+                    {
+                        int tmp = arr[j];
+                        arr[j] = arr[j + step];
+                        arr[j + step] = tmp;
+                        j -= step;
+                    } catch { }  
+                }
+                step = step / 2;
+             }
+
+        Console.WriteLine();
+        foreach (int x in arr)
+            Console.Write(x + " ");
+
+        Console.ReadKey();
+    }
+}
